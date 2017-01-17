@@ -50,10 +50,10 @@
         <form name="clockform">
             <h2>Секундомер</h2>
             <p>
-                <input name="starter" type="button" value="Start/Stop" onclick="findTIME()">
-                <input name="clock" size="12" maxlength="12" value="00:00:00.00"> Метка:
-                <input name="label" size="12" maxlength="40" value=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input name="clearer" type="button" value="Clear" onclick="clearALL()">
+                <input type="button" name="starter" value="Start/Stop" onclick="findTIME()">
+                <input type="text" name="clock" size="12" maxlength="12" value="00:00:00.00"> Метка:
+                <input type="text" name="label" size="12" maxlength="40" value=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" name="clearer" value="Clear" onclick="clearALL()">
             </p>
             <p id="marker">
             </p>

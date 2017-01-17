@@ -94,6 +94,13 @@ a:hover {
     border-spacing: 6px;
 }
 
+input[type="text"], input[type="number"] {
+    border: 1px;
+    margin-top: 4px;
+    width: 100px;
+    height: 30px;
+}
+
 input[type="button"] {
     border: 1px;
     margin-top: 4px;
@@ -114,4 +121,9 @@ input.display {
 
 td.buttons {
     border-top: solid 1px silver;
+}
+
+textarea {
+    width: 90%;
+    height: 150px;
 }
