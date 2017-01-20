@@ -46,7 +46,7 @@ a:hover {
     margin-top: 10px;
     color: #8C91A0;
     font-size: 13px;
-    min-width: 1500px;
+    min-width: 1200px;
 }
 
 .stats span {
@@ -55,7 +55,7 @@ a:hover {
     margin-right: 10px;
 }
 
-.inline-block {
+.inline_block {
     float: left;
     margin: 0 10px;
 }
@@ -101,6 +101,10 @@ a:hover {
 
 .left {
     float: left;
+}
+
+input[type="text"].string_long {
+    width: 300px;
 }
 
 #calculator * {

@@ -17,8 +17,8 @@ function createWindow() {
 
     // Window option
     let options = {
-            width: 1550,
-            height: 800,
+            width: 1200,
+            height: 600,
             title: 'Functional Testing Tools', // Не будет рабoтать, если в `.html` есть тег `title`
             //icon: iconPath,
             webPreferences: {

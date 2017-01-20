@@ -16,17 +16,17 @@
         </div>
         <div class="left_col">
             <form name="createdStr">
-                <h2 class="subheader">Created String</h2>
+                <h2 class="subheader">Create String</h2>
                 <div class="box">
-                    <div class="inline-block">
+                    <div class="inline_block">
                         <span>Symbols:&nbsp;</span>
                         <input type="text" name="sinput" size="10" value="a">
                     </div>
-                    <div class="inline-block">
+                    <div class="inline_block">
                         <span>String length:&nbsp;</span>
                         <input type="number" min="1" max="3000" name="minput" size="10" value="10">
                     </div>
-                    <div class="inline-block">
+                    <div class="inline_block">
                         <input type="button" value="Get" onclick="getmystr(createdStr)">
                     </div>
                 </div>
@@ -42,17 +42,17 @@
             <form name="lenstr">
                 <h2 class="subheader">Count String Length</h2>
                 <div class="box">
-                    <div class="inline-block">
+                    <div class="inline_block">
                         <span>String:&nbsp;</span>
-                        <input type="text" name="minp">
+                        <input class="string_long" type="text" name="minp">
                     </div>
-                    <div class="inline-block">
+                    <div class="inline_block">
                         <input type="button" value="Count" name="button" onclick="lstr(lenstr)">
                     </div>
-                    <div class="inline-block">
-                        <span>Length:&nbsp;</span>
-                        <input type="text" name="mout">
-                    </div>
+                </div>
+                <div>
+                    <span>Length:&nbsp;</span>
+                    <input type="text" name="mout">
                 </div>
                 <br>
                 <hr>
