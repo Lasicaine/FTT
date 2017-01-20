@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="inline-block">
                         <span>String length:&nbsp;</span>
-                        <input type="number" min="0" max="3000" name="minput" size="10" value="10">
+                        <input type="number" min="1" max="3000" name="minput" size="10" value="10">
                     </div>
                     <div class="inline-block">
                         <input type="button" value="Get" onclick="getmystr(createdStr)">
@@ -40,23 +40,29 @@
             </form>
 
             <form name="lenstr">
-                <h2>Подсчёт количества символов в строке</h2>
-
-                Строка:
-                <br>
-                <input type="text" name="minp">
-                <input type="button" value="Count" name="button" onclick="lstr(lenstr)">
-                <br> Длина строки:
-                <br>
-                <input type="number" min="0" name="mout" size="10">
+                <h2 class="subheader">Count String Length</h2>
+                <div class="box">
+                    <div class="inline-block">
+                        <span>String:&nbsp;</span>
+                        <input type="text" name="minp">
+                    </div>
+                    <div class="inline-block">
+                        <input type="button" value="Count" name="button" onclick="lstr(lenstr)">
+                    </div>
+                    <div class="inline-block">
+                        <span>Length:&nbsp;</span>
+                        <input type="text" name="mout">
+                    </div>
+                </div>
                 <br>
                 <hr>
                 <br>
             </form>
         </div>
+
         <div class="right_col">
             <form name="clockform">
-                <h2>Секундомер</h2>
+                <h2>Stopwatch</h2>
                 <p>
                     <input type="button" name="starter" value="Start/Stop" onclick="findTIME()">
                     <input type="text" name="clock" size="12" maxlength="12" value="00:00:00.00"> Метка:

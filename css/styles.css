@@ -125,6 +125,7 @@ input[type="number"] {
     width: 100px;
     height: 30px;
     font-size: 1.2em;
+    text-align: center;
 }
 
 input[type="button"] {
@@ -155,6 +156,7 @@ textarea {
     height: 150px;
     font-size: 1.2em;
     font-family: sans-serif;
+    margin-bottom: 20px;
 }
 
 form {
