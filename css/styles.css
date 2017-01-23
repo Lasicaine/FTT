@@ -49,7 +49,7 @@ a:hover {
     min-width: 1200px;
 }
 
-.stats span {
+.stats label {
     font-weight: bold;
     color: #A2A9BD;
     margin-right: 10px;
@@ -148,6 +148,12 @@ input[type="button"].button-calc {
 input.display {
     width: 170px;
     text-align: right;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 td.buttons {

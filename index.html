@@ -19,19 +19,19 @@
                 <h2 class="subheader">Create String</h2>
                 <div class="box">
                     <div class="inline_block">
-                        <span>Symbols:&nbsp;</span>
-                        <input type="text" name="sinput" size="10" value="a">
+                        <label>Symbols:&nbsp;</label>
+                        <input type="text" name="sinput" size="10" value="a" />
                     </div>
                     <div class="inline_block">
-                        <span>String length:&nbsp;</span>
-                        <input type="number" min="1" max="3000" name="minput" size="10" value="10">
+                        <label>String length:&nbsp;</label>
+                        <input type="number" min="1" max="3000" name="minput" size="10" value="10" required/>
                     </div>
                     <div class="inline_block">
-                        <input type="button" value="Get" onclick="getmystr(createdStr)">
+                        <input type="button" value="Get" onclick="getmystr(createdStr)" />
                     </div>
                 </div>
                 <br>
-                <span>Result:</span>
+                <label>Result:</label>
                 <br>
                 <textarea name="res" width="100%"></textarea>
                 <br>
@@ -43,16 +43,16 @@
                 <h2 class="subheader">Count String Length</h2>
                 <div class="box">
                     <div class="inline_block">
-                        <span>String:&nbsp;</span>
-                        <input class="string_long" type="text" name="minp">
+                        <label>String:&nbsp;</label>
+                        <input class="string_long" type="text" name="minp" />
                     </div>
                     <div class="inline_block">
-                        <input type="button" value="Count" name="button" onclick="lstr(lenstr)">
+                        <input type="button" value="Count" name="button" onclick="lstr(lenstr)" />
                     </div>
                 </div>
                 <div>
-                    <span>Length:&nbsp;</span>
-                    <input type="text" name="mout">
+                    <label>Length:&nbsp;</label>
+                    <input type="text" name="mout" readonly/>
                 </div>
                 <br>
                 <hr>
@@ -64,10 +64,10 @@
             <form name="clockform">
                 <h2>Stopwatch</h2>
                 <p>
-                    <input type="button" name="starter" value="Start/Stop" onclick="findTIME()">
-                    <input type="text" name="clock" size="12" maxlength="12" value="00:00:00.00"> Метка:
-                    <input type="text" name="label" size="12" maxlength="40" value=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" name="clearer" value="Clear" onclick="clearALL()">
+                    <input type="button" name="starter" value="Start/Stop" onclick="findTIME()" />
+                    <input type="text" name="clock" size="12" maxlength="12" value="00:00:00.00" /> Метка:
+                    <input type="text" name="label" size="12" maxlength="40" value="">/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" name="clearer" value="Clear" onclick="clearALL()" />
                 </p>
                 <p id="marker">
                 </p>
@@ -80,30 +80,30 @@
                 <table>
                     <tr>
                         <td>
-                            <input type="text" name="input" size="16" class="display">
+                            <input type="text" name="input" size="16" class="display" />
                         </td>
                     </tr>
                     <tr>
                         <td class="buttons">
-                            <input class="button-calc" type="button" name="one" value="1" onclick="calc.input.value += '1'">
-                            <input class="button-calc" type="button" name="two" value="2" onclick="calc.input.value += '2'">
-                            <input class="button-calc" type="button" name="three" value="3" onclick="calc.input.value += '3'">
-                            <input class="button-calc" type="button" name="add" value="+" onclick="calc.input.value += '+'">
+                            <input class="button-calc" type="button" name="one" value="1" onclick="calc.input.value += '1'" />
+                            <input class="button-calc" type="button" name="two" value="2" onclick="calc.input.value += '2'" />
+                            <input class="button-calc" type="button" name="three" value="3" onclick="calc.input.value += '3'" />
+                            <input class="button-calc" type="button" name="add" value="+" onclick="calc.input.value += '+'" />
                             <br>
-                            <input class="button-calc" type="button" name="four" value="4" onclick="calc.input.value += '4'">
-                            <input class="button-calc" type="button" name="five" value="5" onclick="calc.input.value += '5'">
-                            <input class="button-calc" type="button" name="six" value="6" onclick="calc.input.value += '6'">
-                            <input class="button-calc" type="button" name="sub" value="-" onclick="calc.input.value += '-'">
+                            <input class="button-calc" type="button" name="four" value="4" onclick="calc.input.value += '4'" />
+                            <input class="button-calc" type="button" name="five" value="5" onclick="calc.input.value += '5'" />
+                            <input class="button-calc" type="button" name="six" value="6" onclick="calc.input.value += '6'" />
+                            <input class="button-calc" type="button" name="sub" value="-" onclick="calc.input.value += '-'" />
                             <br>
-                            <input class="button-calc" type="button" name="seven" value="7" onclick="calc.input.value += '7'">
-                            <input class="button-calc" type="button" name="eight" value="8" onclick="calc.input.value += '8'">
-                            <input class="button-calc" type="button" name="nine" value="9" onclick="calc.input.value += '9'">
-                            <input class="button-calc" type="button" name="mul" value="x" onclick="calc.input.value += '*'">
+                            <input class="button-calc" type="button" name="seven" value="7" onclick="calc.input.value += '7'" />
+                            <input class="button-calc" type="button" name="eight" value="8" onclick="calc.input.value += '8'" />
+                            <input class="button-calc" type="button" name="nine" value="9" onclick="calc.input.value += '9'" />
+                            <input class="button-calc" type="button" name="mul" value="x" onclick="calc.input.value += '*'" />
                             <br>
-                            <input class="button-calc" type="button" name="clear" value="c" onclick="calc.input.value = ''">
-                            <input class="button-calc" type="button" name="zero" value="0" onclick="calc.input.value += '0'">
-                            <input class="button-calc" type="button" name="doit" value="=" onclick="calcme(calc.input.value)">
-                            <input class="button-calc" type="button" name="div" value="/" onclick="calc.input.value += '/'">
+                            <input class="button-calc" type="button" name="clear" value="c" onclick="calc.input.value = ''" />
+                            <input class="button-calc" type="button" name="zero" value="0" onclick="calc.input.value += '0'" />
+                            <input class="button-calc" type="button" name="doit" value="=" onclick="calcme(calc.input.value)" />
+                            <input class="button-calc" type="button" name="div" value="/" onclick="calc.input.value += '/'" />
                         </td>
                     </tr>
                 </table>
