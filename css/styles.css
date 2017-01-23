@@ -23,14 +23,13 @@ body {
     color: #FFFFFF;
     text-align: center;
     margin-top: -10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .subheader {
     background-color: #7E07A9;
     color: #FFFFFF;
     text-align: center;
-    margin-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -103,6 +102,14 @@ a:hover {
     float: left;
 }
 
+.place {
+    display: inline-block;
+}
+
+.left_align {
+    text-align: left;
+}
+
 input[type="text"].string_long {
     width: 300px;
 }
@@ -166,10 +173,13 @@ textarea {
     height: 150px;
     font-size: 1.2em;
     font-family: sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: -5px;
 }
 
 form {
-    margin-bottom: 10px;
     width: 98%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #A2A9BD;
 }
