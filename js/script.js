@@ -113,7 +113,7 @@ function clearFields() {
     init = 0;
     clearTimeout(clocktimer);
     document.clockform.clock.value = '00:00:00.00';
-    document.clockform.label.value = '';
+    document.clockform.labelStop.value = '';
 }
 
 function clearALL() {
@@ -149,7 +149,7 @@ function findTIME() {
         startTIME();
         init = 1;
     } else {
-        var str = trim(document.clockform.label.value);
+        var str = trim(document.clockform.labelStop.value);
         document.getElementById('marker').innerHTML = (str == '' ? '' : str + ': ') +
             document.clockform.clock.value + '<br>' + document.getElementById('marker').innerHTML;
         clearFields();
