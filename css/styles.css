@@ -33,13 +33,6 @@ body {
     margin-bottom: 20px;
 }
 
-a,
-a:visited,
-a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
 .stats {
     text-align: center;
     margin-top: 10px;
@@ -56,7 +49,6 @@ a:hover {
 
 .inline_block {
     float: left;
-    margin: 0 10px;
 }
 
 .box {
@@ -108,7 +100,6 @@ a:hover {
 
 .left_align {
     text-align: left;
-    margin: 0 10px;
 }
 
 .label_width {
@@ -118,6 +109,10 @@ a:hover {
 
 input[type="text"].string_long {
     width: 300px;
+}
+
+input[type="button"].margin_none {
+    margin: 0;
 }
 
 #calculator table {
@@ -134,7 +129,7 @@ input[type="text"].string_long {
 input[type="text"],
 input[type="number"] {
     border: 1px;
-    margin: 4px 10px 0 0;
+    margin: 4px 20px 0 0;
     width: 100px;
     height: 30px;
     font-size: 1.2em;
@@ -143,7 +138,7 @@ input[type="number"] {
 
 input[type="button"] {
     border: 1px;
-    margin: 4px 10px 0 0;
+    margin: 4px 20px 0 0;
     width: 100px;
     height: 30px;
     background-color: #4D7B94;
@@ -190,4 +185,5 @@ form {
     text-align: right;
     display: inline-block;
     margin-top: 30px;
+    font-size: 1.2em;
 }
