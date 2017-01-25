@@ -117,6 +117,7 @@ input[type="button"].margin_none {
 
 #calculator table {
     border: solid 3px silver;
+    display: inline-block;
     border-spacing: 6px;
     background-color: #EEE;
 }
@@ -147,10 +148,11 @@ input[type="button"] {
 
 input[type="button"].button-calc {
     width: 40px;
+    margin: 6px 4px;
 }
 
 input.display {
-    width: 170px;
+    width: 200px;
     text-align: right;
 }
 
