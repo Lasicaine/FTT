@@ -116,7 +116,7 @@ input[type="button"].margin_none {
 }
 
 #calculator table {
-    border: solid 3px silver;
+    border: solid 3px #A9A9A9;
     display: inline-block;
     border-spacing: 6px;
     background-color: #EEE;
@@ -125,6 +125,15 @@ input[type="button"].margin_none {
 #calculator table td {
     margin-left: 10px;
     border-spacing: 6px;
+}
+
+#calculator input[type="text"] {
+    margin: 0;
+    border: solid 1px #A9A9A9;
+    width: 185px;
+    height: 22px;
+    text-align: right;
+    padding: 4px;
 }
 
 input[type="text"],
@@ -151,11 +160,6 @@ input[type="button"].button-calc {
     margin: 6px 4px;
 }
 
-input.display {
-    width: 200px;
-    text-align: right;
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -163,7 +167,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 td.buttons {
-    border-top: solid 1px silver;
+    border-top: solid 1px #A9A9A9;
+    padding-top: 5px;
+    width: 210px;
 }
 
 textarea {
