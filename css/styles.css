@@ -16,13 +16,25 @@ html {
 body {
     font: 14px/1.5 Arial, Helvetica, sans-serif;
     color: #fff;
+    height: 100%;
+}
+
+.wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.content {
+    display: table-row;
+    height: 100%;
 }
 
 .header {
     background-color: #0F3753;
     color: #FFFFFF;
     text-align: center;
-    margin-top: -10px;
     margin-bottom: 20px;
 }
 
@@ -38,7 +50,6 @@ body {
     margin-top: 10px;
     color: #E5EBEE;
     font-size: 13px;
-    min-width: 1200px;
 }
 
 .stats label {
@@ -82,9 +93,7 @@ body {
 }
 
 .footer {
-    height: 20px;
     margin: 10px;
-    background: #14243d;
     text-align: right;
     color: #8C91A0;
     font-size: 13px;
