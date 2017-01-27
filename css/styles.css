@@ -4,58 +4,68 @@
 }
 
 html {
-    background: #14243d;
-    background: radial-gradient(ellipse at center, #14243d 0%, #030611 100%);
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    text-align: center;
+    background: #14243d;
+    background: radial-gradient(ellipse at center, #14243d 0%, #030611 100%);
 }
 
 body {
+    height: 100%;
     font: 14px/1.5 Arial, Helvetica, sans-serif;
     color: #fff;
-    height: 100%;
 }
 
 .wrapper {
     display: table;
     height: 100%;
     width: 100%;
-    min-width: 1200px;
+    min-width: 1150px;
 }
 
 .content {
     display: table-row;
     height: 100%;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #E5EBEE;
+}
+
+.content label {
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 .header {
     background-color: #0F3753;
     color: #FFFFFF;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .subheader {
+    margin-bottom: 20px;
     background-color: #215B7A;
     color: #FFFFFF;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
-.stats {
-    text-align: center;
-    margin-top: 10px;
-    color: #E5EBEE;
+.left_col {
+    width: 50%;
+    float: left;
+}
+
+.right_col {
+    width: 50%;
+    float: left
+}
+
+.footer {
+    text-align: right;
+    margin: 10px;
     font-size: 13px;
-}
-
-.stats label {
-    font-weight: bold;
-    color: #E5EBEE;
-    margin-right: 10px;
+    color: #8C91A0;
 }
 
 .inline_block {
@@ -65,38 +75,6 @@ body {
 .box {
     display: inline-block;
     margin-bottom: 20px;
-}
-
-.content:after,
-.content:before {
-    content: ' ';
-    display: table;
-}
-
-.content:after {
-    clear: both;
-}
-
-.left_col {
-    width: 50%;
-    float: left;
-}
-
-.center_col {
-    width: 30%;
-    float: left
-}
-
-.right_col {
-    width: 50%;
-    float: left
-}
-
-.footer {
-    margin: 10px;
-    text-align: right;
-    color: #8C91A0;
-    font-size: 13px;
 }
 
 .left {
@@ -116,18 +94,17 @@ body {
     display: inline-block;
 }
 
-input[type="text"].string_long {
-    width: 300px;
-}
-
-input[type="button"].margin_none {
-    margin: 0;
+.note_stop {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 1.2em;
+    text-align: right;
 }
 
 #calculator table {
-    border: solid 3px #A9A9A9;
     display: inline-block;
     border-spacing: 6px;
+    border: solid 3px #A9A9A9;
     background-color: #EEE;
 }
 
@@ -138,11 +115,11 @@ input[type="button"].margin_none {
 
 #calculator input[type="text"] {
     margin: 0;
-    border: solid 1px #A9A9A9;
+    padding: 4px;
     width: 185px;
     height: 22px;
+    border: solid 1px #A9A9A9;
     text-align: right;
-    padding: 4px;
 }
 
 input[type="text"],
@@ -175,6 +152,14 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+input[type="text"].string_long {
+    width: 300px;
+}
+
+input[type="button"].margin_none {
+    margin: 0;
+}
+
 td.buttons {
     border-top: solid 1px #A9A9A9;
     padding-top: 5px;
@@ -185,22 +170,14 @@ textarea {
     width: 95%;
     max-width: 100%;
     height: 150px;
+    margin-bottom: -5px;
     font-size: 1.2em;
     font-family: sans-serif;
-    margin-bottom: -5px;
 }
 
 form {
     width: 98%;
-    margin-left: 10px;
-    margin-bottom: 20px;
+    margin: 20px 10px;
     padding-bottom: 20px;
     border: 1px solid #215B7A;
-}
-
-#marker {
-    text-align: right;
-    display: inline-block;
-    margin-top: 30px;
-    font-size: 1.2em;
 }
