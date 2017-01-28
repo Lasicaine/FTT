@@ -1,22 +1,20 @@
 "use strict";
 
-function createString(obj) {
-    var str = obj.symbols.value;
-    var ss = obj.symbols.value;
-    var x = obj.lengthStr.value;
+function createString(createdStringForm) {
+    var str = createdStringForm.symbols.value;
+    var ss = createdStringForm.symbols.value;
+    var x = createdStringForm.lengthStr.value;
     while (str.length < x) {
         str = str + ss;
     }
     if (str.length > x) {
         str = str.slice(0, x);
     }
-    obj.result.value = str;
+    createdStringForm.result.value = str;
 }
 
-function lstr(ob) {
-    var e = ob.minp.value;
-    var d = e.length;
-    ob.mout.value = d;
+function lengthString(countLengthForm) {
+    countLengthForm.resultLength.value = countLengthForm.originalString.value.length;
 }
 
 //Attention!!! Not secure function!

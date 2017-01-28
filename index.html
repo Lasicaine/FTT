@@ -16,7 +16,7 @@
                 <h1>Functional testing tools</h1>
             </div>
             <div class="left_col">
-                <form name="createdStr">
+                <form name="createdStringForm">
                     <h2 class="subheader">Create String</h2>
                     <div class="box">
                         <div class="left">
@@ -28,7 +28,7 @@
                             <input type="number" min="1" max="3000" name="lengthStr" size="10" value="10" required />
                         </div>
                         <div class="left">
-                            <input type="button" value="Create" onclick="createString(createdStr)" />
+                            <input type="button" value="Create" onclick="createString(createdStringForm)" />
                         </div>
                     </div>
                     <br>
@@ -37,21 +37,21 @@
                     <textarea name="result" width="100%"></textarea>
                 </form>
 
-                <form name="countLength">
+                <form name="countLengthForm">
                     <h2 class="subheader">Count String Length</h2>
                     <div class="place">
                         <div class="box">
                             <div class="left">
-                                <label class="label_width" for="minp">String:&nbsp;</label>
-                                <input class="string_long" type="text" name="minp" />
+                                <label class="label_width" for="originalString">String:&nbsp;</label>
+                                <input class="input_string" type="text" name="originalString" />
                             </div>
                             <div class="left">
-                                <input type="button" value="Count" name="button" onclick="lstr(countLength)" />
+                                <input type="button" value="Count" name="button" onclick="lengthString(countLengthForm)" />
                             </div>
                         </div>
                         <div class="result_align">
-                            <label for="mout">Length:&nbsp;</label>
-                            <input type="text" name="mout" readonly/>
+                            <label for="resultLength">Length:&nbsp;</label>
+                            <input type="text" name="resultLength" readonly/>
                         </div>
                     </div>
                 </form>
