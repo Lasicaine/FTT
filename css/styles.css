@@ -15,9 +15,7 @@ html {
 }
 
 body {
-    height: 100%;
     font: 14px/1.5 Arial, Helvetica, sans-serif;
-    color: #fff;
 }
 
 .wrapper {
@@ -30,7 +28,6 @@ body {
 .content {
     display: table-row;
     height: 100%;
-    margin-top: 10px;
     font-size: 13px;
     color: #E5EBEE;
 }
@@ -68,13 +65,9 @@ body {
     color: #8C91A0;
 }
 
-.inline_block {
-    float: left;
-}
-
 .box {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .left {
@@ -85,7 +78,7 @@ body {
     display: inline-block;
 }
 
-.left_align {
+.result_align {
     text-align: left;
 }
 
@@ -108,15 +101,10 @@ body {
     background-color: #EEE;
 }
 
-#calculator table td {
-    margin-left: 10px;
-    border-spacing: 6px;
-}
-
 #calculator input[type="text"] {
-    margin: 0;
+    margin: 2px 0;
     padding: 4px;
-    width: 185px;
+    width: 174px;
     height: 22px;
     border: solid 1px #A9A9A9;
     text-align: right;
@@ -134,7 +122,7 @@ input[type="number"] {
 
 input[type="button"] {
     border: 1px;
-    margin: 4px 20px 0 0;
+    margin: 4px 0 4px 0;
     width: 100px;
     height: 30px;
     background-color: #4D7B94;
@@ -143,7 +131,11 @@ input[type="button"] {
 
 input[type="button"].button-calc {
     width: 40px;
-    margin: 6px 4px;
+    margin: 4px 2px;
+}
+
+input[type="button"].button-start {
+    margin-right: 10px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -153,17 +145,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type="text"].string_long {
-    width: 300px;
-}
-
-input[type="button"].margin_none {
-    margin: 0;
+    width: 320px;
 }
 
 td.buttons {
     border-top: solid 1px #A9A9A9;
-    padding-top: 5px;
-    width: 210px;
+    padding-top: 4px;
+    width: 190px;
 }
 
 textarea {
@@ -176,7 +164,6 @@ textarea {
 }
 
 form {
-    width: 98%;
     margin: 20px 10px;
     padding-bottom: 20px;
     border: 1px solid #215B7A;
