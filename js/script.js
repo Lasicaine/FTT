@@ -1,16 +1,16 @@
 "use strict";
 
-function getmystr(obj) {
-    var x = obj.minput.value;
-    var str = obj.sinput.value;
-    var ss = obj.sinput.value;
+function createString(obj) {
+    var str = obj.symbols.value;
+    var ss = obj.symbols.value;
+    var x = obj.lengthStr.value;
     while (str.length < x) {
         str = str + ss;
     }
     if (str.length > x) {
         str = str.slice(0, x);
     }
-    obj.res.value = str;
+    obj.result.value = str;
 }
 
 function lstr(ob) {
@@ -19,16 +19,16 @@ function lstr(ob) {
     ob.mout.value = d;
 }
 
-//функция для вычисления значения в строке
+//Attention!!! Not secure function!
 function calcme(clc) {
     try {
         calc.input.value = eval(clc)
     } catch (e) {
-        alert('Sample not calculated!');
+        calc.input.value = 'Sample not calculated!';
     };
 }
 
-//Скрипт для нового секундомера
+
 function trim(string) { return string.replace(/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, ''); }
 var init = 0;
 var startDate;
