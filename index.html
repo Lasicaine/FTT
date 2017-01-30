@@ -28,13 +28,13 @@
                             <input type="number" min="1" max="3000" name="lengthStr" size="10" value="10" required />
                         </div>
                         <div class="left_float">
-                            <input type="button" value="Create" onclick="createString()" />
+                            <input type="button" value="Create" name="btn-create" onclick="createString()" />
                         </div>
                     </div>
                     <br>
                     <label>Result:</label>
                     <br>
-                    <textarea name="result" width="100%"></textarea>
+                    <textarea name="result"></textarea>
                 </form>
 
                 <form name="countLengthForm">
@@ -42,11 +42,11 @@
                     <div class="wrapper_inline_block">
                         <div class="wrapper_inline_block">
                             <div class="left_float">
-                                <label class="label_width" for="originalString">String:&nbsp;</label>
+                                <label class="label_originalString" for="originalString">String:&nbsp;</label>
                                 <input class="input_string" type="text" name="originalString" />
                             </div>
                             <div class="left_float">
-                                <input type="button" value="Count" name="button" onclick="lengthString()" />
+                                <input type="button" value="Count" name="btn-count" onclick="lengthString()" />
                             </div>
                         </div>
                         <div class="result_align">
@@ -64,8 +64,8 @@
                         <label for="labelStop">Label:&nbsp;</label>
                         <input type="text" name="labelStop" size="12" maxlength="40" value="" />
                         <input type="text" name="clock" size="12" maxlength="12" value="00:00:00.00" />
-                        <input type="button" class="button-start" name="starter" value="Start/Stop" onclick="findTime()" />
-                        <input type="button" name="clearer" value="Clear" onclick="clearAll()" />
+                        <input type="button" class="button-start" name="btn-start" value="Start/Stop" onclick="findTime()" />
+                        <input type="button" name="btn-clear" value="Clear" onclick="clearAll()" />
                         <div>
                             <p id="noteStop" class="note_stop">
                             </p>
@@ -83,22 +83,22 @@
                         </tr>
                         <tr>
                             <td class="buttons">
-                                <input class="button-calc" type="button" name="one" value="1" onclick="calc.input.value += '1'" />
-                                <input class="button-calc" type="button" name="two" value="2" onclick="calc.input.value += '2'" />
-                                <input class="button-calc" type="button" name="three" value="3" onclick="calc.input.value += '3'" />
-                                <input class="button-calc" type="button" name="add" value="+" onclick="calc.input.value += '+'" />
-                                <input class="button-calc" type="button" name="four" value="4" onclick="calc.input.value += '4'" />
-                                <input class="button-calc" type="button" name="five" value="5" onclick="calc.input.value += '5'" />
-                                <input class="button-calc" type="button" name="six" value="6" onclick="calc.input.value += '6'" />
-                                <input class="button-calc" type="button" name="sub" value="-" onclick="calc.input.value += '-'" />
-                                <input class="button-calc" type="button" name="seven" value="7" onclick="calc.input.value += '7'" />
-                                <input class="button-calc" type="button" name="eight" value="8" onclick="calc.input.value += '8'" />
-                                <input class="button-calc" type="button" name="nine" value="9" onclick="calc.input.value += '9'" />
-                                <input class="button-calc" type="button" name="mul" value="x" onclick="calc.input.value += '*'" />
-                                <input class="button-calc" type="button" name="clear" value="C" onclick="calc.input.value = ''" />
-                                <input class="button-calc" type="button" name="zero" value="0" onclick="calc.input.value += '0'" />
-                                <input class="button-calc" type="button" name="doit" value="=" onclick="calcme(calc.input.value)" />
-                                <input class="button-calc" type="button" name="div" value="/" onclick="calc.input.value += '/'" />
+                                <input class="button-calc" type="button" name="btn-one" value="1" onclick="calc.input.value += '1'" />
+                                <input class="button-calc" type="button" name="btn-two" value="2" onclick="calc.input.value += '2'" />
+                                <input class="button-calc" type="button" name="btn-three" value="3" onclick="calc.input.value += '3'" />
+                                <input class="button-calc" type="button" name="btn-add" value="+" onclick="calc.input.value += '+'" />
+                                <input class="button-calc" type="button" name="btn-four" value="4" onclick="calc.input.value += '4'" />
+                                <input class="button-calc" type="button" name="btn-five" value="5" onclick="calc.input.value += '5'" />
+                                <input class="button-calc" type="button" name="btn-six" value="6" onclick="calc.input.value += '6'" />
+                                <input class="button-calc" type="button" name="btn-sub" value="-" onclick="calc.input.value += '-'" />
+                                <input class="button-calc" type="button" name="btn-seven" value="7" onclick="calc.input.value += '7'" />
+                                <input class="button-calc" type="button" name="btn-eight" value="8" onclick="calc.input.value += '8'" />
+                                <input class="button-calc" type="button" name="btn-nine" value="9" onclick="calc.input.value += '9'" />
+                                <input class="button-calc" type="button" name="btn-mul" value="x" onclick="calc.input.value += '*'" />
+                                <input class="button-calc" type="button" name="btn-clear" value="C" onclick="calc.input.value = ''" />
+                                <input class="button-calc" type="button" name="btn-zero" value="0" onclick="calc.input.value += '0'" />
+                                <input class="button-calc" type="button" name="btn-doit" value="=" onclick="calcme(calc.input.value)" />
+                                <input class="button-calc" type="button" name="btn-div" value="/" onclick="calc.input.value += '/'" />
                             </td>
                         </tr>
                     </table>

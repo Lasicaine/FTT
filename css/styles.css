@@ -79,7 +79,7 @@ body {
     text-align: left;
 }
 
-.label_width {
+.label_originalString {
     width: 51px;
     display: inline-block;
 }
@@ -152,8 +152,8 @@ td.buttons {
 }
 
 textarea {
-    width: 95%;
-    max-width: 100%;
+    width: 96%;
+    max-width: 99%;
     height: 150px;
     margin-bottom: -5px;
     font-size: 1.2em;
