@@ -34,8 +34,8 @@ body {
 }
 
 .content label {
-    font-weight: bold;
     margin-right: 10px;
+    font-weight: bold;
 }
 
 .header {
@@ -79,12 +79,12 @@ body {
     text-align: left;
 }
 
-.label_originalString {
+.label_original_string {
     width: 51px;
     display: inline-block;
 }
 
-.note_stop {
+.stopwatcher_result {
     display: inline-block;
     margin-top: 30px;
     font-size: 1.2em;
@@ -96,6 +96,12 @@ body {
     border-spacing: 6px;
     border: solid 3px #A9A9A9;
     background-color: #EEE;
+}
+
+#calculator td.buttons {
+    border-top: solid 1px #A9A9A9;
+    padding-top: 4px;
+    width: 190px;
 }
 
 #calculator input[type="text"] {
@@ -143,12 +149,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type="text"].input_string {
     width: 320px;
-}
-
-td.buttons {
-    border-top: solid 1px #A9A9A9;
-    padding-top: 4px;
-    width: 190px;
 }
 
 textarea {

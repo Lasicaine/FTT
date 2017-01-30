@@ -1,5 +1,13 @@
 "use strict";
 
+//Variable vor Stopwatch
+
+var ftt = {}
+
+ftt.init = 0;
+ftt.startDate = undefined;
+ftt.clocktimer = undefined;
+
 //function for create string
 function createString() {
     var str = createdStringForm.symbols.value;
@@ -20,14 +28,13 @@ function lengthString() {
 }
 
 //block functions for Stopwatch
-function trim(string) { return string.replace(/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, ''); }
-var init = 0;
-var startDate;
-var clocktimer;
+function trim(string) {
+    return string.replace(/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, '');
+}
 
 function clearFields() {
-    init = 0;
-    clearTimeout(clocktimer);
+    ftt.init = 0;
+    clearTimeout(ftt.clocktimer);
     document.clockForm.clock.value = '00:00:00.00';
     document.clockForm.labelStop.value = '';
 }
@@ -39,7 +46,7 @@ function clearAll() {
 
 function startTime() {
     var thisDate = new Date();
-    var t = thisDate.getTime() - startDate.getTime();
+    var t = thisDate.getTime() - ftt.startDate.getTime();
     var ms = t % 1000;
     t -= ms;
     ms = Math.floor(ms / 10);
@@ -55,15 +62,15 @@ function startTime() {
     if (m < 10) m = '0' + m;
     if (s < 10) s = '0' + s;
     if (ms < 10) ms = '0' + ms;
-    if (init == 1) document.clockForm.clock.value = h + ':' + m + ':' + s + '.' + ms;
-    clocktimer = setTimeout("startTime()", 10);
+    if (ftt.init == 1) document.clockForm.clock.value = h + ':' + m + ':' + s + '.' + ms;
+    ftt.clocktimer = setTimeout("startTime()", 10);
 }
 
 function findTime() {
-    if (init == 0) {
-        startDate = new Date();
+    if (ftt.init == 0) {
+        ftt.startDate = new Date();
         startTime();
-        init = 1;
+        ftt.init = 1;
     } else {
         var str = trim(document.clockForm.labelStop.value);
         document.getElementById('noteStop').innerHTML = (str == '' ? '' : str + ': ') +
