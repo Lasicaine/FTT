@@ -18,17 +18,17 @@
             <div class="left_col">
                 <form name="createdStringForm">
                     <h2 class="subheader">Create String</h2>
-                    <div class="box">
-                        <div class="left">
+                    <div class="wrapper_inline_block">
+                        <div class="left_float">
                             <label for="symbols">Symbols:&nbsp;</label>
                             <input type="text" name="symbols" size="10" value="a" />
                         </div>
-                        <div class="left">
+                        <div class="left_float">
                             <label for="lengthStr">String length:&nbsp;</label>
                             <input type="number" min="1" max="3000" name="lengthStr" size="10" value="10" required />
                         </div>
-                        <div class="left">
-                            <input type="button" value="Create" onclick="createString(createdStringForm)" />
+                        <div class="left_float">
+                            <input type="button" value="Create" onclick="createString()" />
                         </div>
                     </div>
                     <br>
@@ -39,14 +39,14 @@
 
                 <form name="countLengthForm">
                     <h2 class="subheader">Count String Length</h2>
-                    <div class="place">
-                        <div class="box">
-                            <div class="left">
+                    <div class="wrapper_inline_block">
+                        <div class="wrapper_inline_block">
+                            <div class="left_float">
                                 <label class="label_width" for="originalString">String:&nbsp;</label>
                                 <input class="input_string" type="text" name="originalString" />
                             </div>
-                            <div class="left">
-                                <input type="button" value="Count" name="button" onclick="lengthString(countLengthForm)" />
+                            <div class="left_float">
+                                <input type="button" value="Count" name="button" onclick="lengthString()" />
                             </div>
                         </div>
                         <div class="result_align">
@@ -58,14 +58,14 @@
             </div>
 
             <div class="right_col">
-                <form name="clockform">
+                <form name="clockForm">
                     <h2 class="subheader">Stopwatch</h2>
-                    <div class="box">
+                    <div class="wrapper_inline_block">
                         <label for="labelStop">Label:&nbsp;</label>
                         <input type="text" name="labelStop" size="12" maxlength="40" value="" />
                         <input type="text" name="clock" size="12" maxlength="12" value="00:00:00.00" />
-                        <input type="button" class="button-start" name="starter" value="Start/Stop" onclick="findTIME()" />
-                        <input type="button" name="clearer" value="Clear" onclick="clearALL()" />
+                        <input type="button" class="button-start" name="starter" value="Start/Stop" onclick="findTime()" />
+                        <input type="button" name="clearer" value="Clear" onclick="clearAll()" />
                         <div>
                             <p id="noteStop" class="note_stop">
                             </p>

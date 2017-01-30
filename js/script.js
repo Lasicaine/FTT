@@ -1,6 +1,7 @@
 "use strict";
 
-function createString(createdStringForm) {
+//function for create string
+function createString() {
     var str = createdStringForm.symbols.value;
     var ss = createdStringForm.symbols.value;
     var x = createdStringForm.lengthStr.value;
@@ -13,20 +14,12 @@ function createString(createdStringForm) {
     createdStringForm.result.value = str;
 }
 
-function lengthString(countLengthForm) {
+//function for calculate string length
+function lengthString() {
     countLengthForm.resultLength.value = countLengthForm.originalString.value.length;
 }
 
-//Attention!!! Not secure function!
-function calcme(clc) {
-    try {
-        calc.input.value = eval(clc)
-    } catch (e) {
-        calc.input.value = 'Sample not calculated!';
-    };
-}
-
-
+//block functions for Stopwatch
 function trim(string) { return string.replace(/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, ''); }
 var init = 0;
 var startDate;
@@ -35,16 +28,16 @@ var clocktimer;
 function clearFields() {
     init = 0;
     clearTimeout(clocktimer);
-    document.clockform.clock.value = '00:00:00.00';
-    document.clockform.labelStop.value = '';
+    document.clockForm.clock.value = '00:00:00.00';
+    document.clockForm.labelStop.value = '';
 }
 
-function clearALL() {
+function clearAll() {
     clearFields();
     document.getElementById('noteStop').innerHTML = '';
 }
 
-function startTIME() {
+function startTime() {
     var thisDate = new Date();
     var t = thisDate.getTime() - startDate.getTime();
     var ms = t % 1000;
@@ -62,19 +55,29 @@ function startTIME() {
     if (m < 10) m = '0' + m;
     if (s < 10) s = '0' + s;
     if (ms < 10) ms = '0' + ms;
-    if (init == 1) document.clockform.clock.value = h + ':' + m + ':' + s + '.' + ms;
-    clocktimer = setTimeout("startTIME()", 10);
+    if (init == 1) document.clockForm.clock.value = h + ':' + m + ':' + s + '.' + ms;
+    clocktimer = setTimeout("startTime()", 10);
 }
 
-function findTIME() {
+function findTime() {
     if (init == 0) {
         startDate = new Date();
-        startTIME();
+        startTime();
         init = 1;
     } else {
-        var str = trim(document.clockform.labelStop.value);
+        var str = trim(document.clockForm.labelStop.value);
         document.getElementById('noteStop').innerHTML = (str == '' ? '' : str + ': ') +
-            document.clockform.clock.value + '<br>' + document.getElementById('noteStop').innerHTML;
+            document.clockForm.clock.value + '<br>' + document.getElementById('noteStop').innerHTML;
         clearFields();
     }
+}
+
+//function for calculator
+//Attention!!! Not secure function!
+function calcme(clc) {
+    try {
+        calc.input.value = eval(clc)
+    } catch (e) {
+        calc.input.value = 'Sample not calculated!';
+    };
 }

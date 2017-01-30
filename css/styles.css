@@ -66,17 +66,13 @@ body {
     color: #8C91A0;
 }
 
-.box {
+.wrapper_inline_block {
     display: inline-block;
     margin-bottom: 10px;
 }
 
-.left {
+.left_float {
     float: left;
-}
-
-.place {
-    display: inline-block;
 }
 
 .result_align {
