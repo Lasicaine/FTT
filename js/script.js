@@ -89,8 +89,12 @@ function findTime() {
 
 //Block function for calculator
 function inspectionKey(e) {
-    if (e.keyCode == 13) {
+    if (e.keyCode == 13 || ((e.keyCode == 187) && (!e.shiftKey))) {
         calcme(calc.input.value);
+        return false;
+    }
+    if (e.keyCode === 27) {
+        calc.input.value = '';
         return false;
     }
 }
@@ -98,8 +102,15 @@ function inspectionKey(e) {
 //Attention!!! Not secure function!
 function calcme(clc) {
     try {
-        calc.input.value = eval(clc)
+        let res = eval(clc);
+        if (res == Infinity || res == -Infinity) {
+            throw "Error calculated";
+        }
+        if (res || res === 0) {
+            calc.input.value = res;
+        }
     } catch (e) {
+        console.log(e);
         calc.input.value = 'Sample not calculated!';
     };
 }
