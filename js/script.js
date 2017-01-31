@@ -1,6 +1,6 @@
 "use strict";
 
-//variable vor Stopwatch
+//Variable vor Stopwatch
 
 const ftt = {}
 
@@ -10,13 +10,13 @@ ftt.clocktimer = undefined;
 
 window.onload = getThisYear;
 
-//function for get this year
+//Function for get this year
 function getThisYear() {
     let year = new Date();
     thisYear.innerHTML = year.getFullYear();
 }
 
-//function for create string
+//Function for create string
 function createString() {
     let str = createdStringForm.symbols.value;
     let ss = createdStringForm.symbols.value;
@@ -30,12 +30,12 @@ function createString() {
     createdStringForm.result.value = str;
 }
 
-//function for calculate string length
+//Function for calculate string length
 function lengthString() {
     countLengthForm.resultLength.value = countLengthForm.originalString.value.length;
 }
 
-//block functions for Stopwatch
+//Block functions for Stopwatch
 function trim(string) {
     return string.replace(/\s+/g, " ").replace(/(^\s*)|(\s*)$/g, '');
 }
@@ -87,7 +87,14 @@ function findTime() {
     }
 }
 
-//function for calculator
+//Block function for calculator
+function inspectionKey(e) {
+    if (e.keyCode == 13) {
+        calcme(calc.input.value);
+        return false;
+    }
+}
+
 //Attention!!! Not secure function!
 function calcme(clc) {
     try {
