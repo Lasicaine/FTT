@@ -138,7 +138,7 @@ input[type="button"].button-calc {
 }
 
 input[type="button"].button-start {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -155,7 +155,7 @@ textarea {
     width: 96%;
     max-width: 99%;
     height: 150px;
-    margin-bottom: -5px;
+    margin: 5px 0 -5px 0;
     font-size: 1.2em;
     font-family: sans-serif;
 }

@@ -1,18 +1,26 @@
 "use strict";
 
-//Variable vor Stopwatch
+//variable vor Stopwatch
 
-var ftt = {}
+const ftt = {}
 
 ftt.init = 0;
 ftt.startDate = undefined;
 ftt.clocktimer = undefined;
 
+window.onload = getThisYear;
+
+//function for get this year
+function getThisYear() {
+    let year = new Date();
+    thisYear.innerHTML = year.getFullYear();
+}
+
 //function for create string
 function createString() {
-    var str = createdStringForm.symbols.value;
-    var ss = createdStringForm.symbols.value;
-    var x = createdStringForm.lengthStr.value;
+    let str = createdStringForm.symbols.value;
+    let ss = createdStringForm.symbols.value;
+    let x = createdStringForm.lengthStr.value;
     while (str.length < x) {
         str = str + ss;
     }
@@ -45,19 +53,19 @@ function clearAll() {
 }
 
 function startTime() {
-    var thisDate = new Date();
-    var t = thisDate.getTime() - ftt.startDate.getTime();
-    var ms = t % 1000;
+    let thisDate = new Date();
+    let t = thisDate.getTime() - ftt.startDate.getTime();
+    let ms = t % 1000;
     t -= ms;
     ms = Math.floor(ms / 10);
     t = Math.floor(t / 1000);
-    var s = t % 60;
+    let s = t % 60;
     t -= s;
     t = Math.floor(t / 60);
-    var m = t % 60;
+    let m = t % 60;
     t -= m;
     t = Math.floor(t / 60);
-    var h = t % 60;
+    let h = t % 60;
     if (h < 10) h = '0' + h;
     if (m < 10) m = '0' + m;
     if (s < 10) s = '0' + s;
@@ -72,7 +80,7 @@ function findTime() {
         startTime();
         ftt.init = 1;
     } else {
-        var str = trim(document.clockForm.labelStop.value);
+        let str = trim(document.clockForm.labelStop.value);
         document.getElementById('noteStop').innerHTML = (str == '' ? '' : str + ': ') +
             document.clockForm.clock.value + '<br>' + document.getElementById('noteStop').innerHTML;
         clearFields();
