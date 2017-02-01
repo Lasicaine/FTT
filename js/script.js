@@ -107,11 +107,16 @@ function prepareCalcInput(calcInput) {
     return preparedInput;
 }
 
+function delChar(calcInput) {
+    let position = calc.input.selectionStart;
+    var newInput = calcInput.substring(0, position - 1) + calcInput.substring(position, calcInput.length);
+    calc.input.value = newInput;
+}
+
 //Attention!!! Not secure function!
 function calcme(clc) {
     try {
         let preparedInput = prepareCalcInput(clc);
-        console.log(preparedInput);
         let result = eval(preparedInput);
         if (result == Infinity || result == -Infinity) {
             throw "Calculation error";
