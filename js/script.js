@@ -102,12 +102,14 @@ function inspectionKey(e) {
 //Attention!!! Not secure function!
 function calcme(clc) {
     try {
-        let res = eval(clc);
-        if (res == Infinity || res == -Infinity) {
+        let regex = /(\D|^)(0+)(\d)/g;
+        let res = clc.replace(regex, '$1$3');
+        let result = eval(res);
+        if (result == Infinity || result == -Infinity) {
             throw "Error calculated";
         }
-        if (res || res === 0) {
-            calc.input.value = res;
+        if (result || result === 0) {
+            calc.input.value = result;
         }
     } catch (e) {
         console.log(e);
