@@ -83,6 +83,10 @@
                         </tr>
                         <tr>
                             <td class="buttons">
+                                <input class="button-calc" type="button" name="btn-open-bracket" value="(" onclick="calc.input.value += '('" />
+                                <input class="button-calc" type="button" name="btn-closed-bracket" value=")" onclick="calc.input.value += ')'" />
+                                <input class="button-calc" type="button" name="btn-positive-negative" value="±" onclick="calc.input.value += ''" />
+                                <input class="button-calc" type="button" name="btn-clear" value="CE" onclick="calc.input.value = ''" />
                                 <input class="button-calc" type="button" name="btn-one" value="1" onclick="calc.input.value += '1'" />
                                 <input class="button-calc" type="button" name="btn-two" value="2" onclick="calc.input.value += '2'" />
                                 <input class="button-calc" type="button" name="btn-three" value="3" onclick="calc.input.value += '3'" />
@@ -95,7 +99,7 @@
                                 <input class="button-calc" type="button" name="btn-eight" value="8" onclick="calc.input.value += '8'" />
                                 <input class="button-calc" type="button" name="btn-nine" value="9" onclick="calc.input.value += '9'" />
                                 <input class="button-calc" type="button" name="btn-mul" value="x" onclick="calc.input.value += '*'" />
-                                <input class="button-calc" type="button" name="btn-clear" value="C" onclick="calc.input.value = ''" />
+                                <input class="button-calc" type="button" name="btn-dot" value="." onclick="calc.input.value += '.'" />
                                 <input class="button-calc" type="button" name="btn-zero" value="0" onclick="calc.input.value += '0'" />
                                 <input class="button-calc" type="button" name="btn-doit" value="=" onclick="calcme(calc.input.value)" />
                                 <input class="button-calc" type="button" name="btn-div" value="/" onclick="calc.input.value += '/'" />
