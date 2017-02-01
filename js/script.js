@@ -99,14 +99,22 @@ function inspectionKey(e) {
     }
 }
 
+function prepareCalcInput(calcInput) {
+    const comaToDotRegex = /\,+/g;
+    const delLeadingZeroesRegex = /([^.\d]|^)(0+)(\d)/g;
+    let inputWithoutComa = calcInput.replace(comaToDotRegex, '.');
+    let preparedInput = inputWithoutComa.replace(delLeadingZeroesRegex, '$1$3');
+    return preparedInput;
+}
+
 //Attention!!! Not secure function!
 function calcme(clc) {
     try {
-        let regex = /(\D|^)(0+)(\d)/g;
-        let res = clc.replace(regex, '$1$3');
-        let result = eval(res);
+        let preparedInput = prepareCalcInput(clc);
+        console.log(preparedInput);
+        let result = eval(preparedInput);
         if (result == Infinity || result == -Infinity) {
-            throw "Error calculated";
+            throw "Calculation error";
         }
         if (result || result === 0) {
             calc.input.value = result;
